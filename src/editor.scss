@@ -1,0 +1,35 @@
+// For Pattern
+.block-editor-inserter__panel-content {
+	.block-editor-block-preview__content {
+		min-height: 176px;
+
+		>iframe {
+			min-height: 706px;
+
+			.block-editor-block-preview__content-iframe {
+				height: auto;
+			}
+		}
+	}
+}
+
+// Content Slider Block
+.wp-block-csb-content-slider-block {
+	.mouse {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		z-index: 5;
+	}
+
+	.csbContentSlider {
+		.swiper-slide {
+
+			.slideTitle,
+			.slideDesc,
+			.slideBtn {
+				cursor: move;
+			}
+		}
+	}
+}
