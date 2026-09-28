@@ -76,7 +76,7 @@ const Settings = ({ attributes, setAttributes, clientId, activeIndex, setActiveI
 
 			<TabPanel className='bPlTabPanel' activeClass='activeTab' tabs={tabs}>{tab => <>
 				{'general' === tab.name && <>
-					<HelpPanel slug={pluginSlug} docsLink='https://bplugins.com/docs/content-slider-block/guides/general' />
+					<HelpPanel slug={pluginSlug} docsLink='https://bplugins.com/docs/content-slider-block/' />
 
 
 					<PanelBody className='bPlPanelBody' title={__('Slides', 'content-slider-block')}>

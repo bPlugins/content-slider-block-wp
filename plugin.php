@@ -5,12 +5,12 @@
  * Version: 3.2.1
  * Author: bPlugins
  * Author URI: https://bplugins.com
- * Plugin URI: https://bplugins.com/products/content-slider-block
+ * Plugin URI: https://bplugins.com/products/content-slider-block/
  * License: GPLv3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.txt
  * Text Domain: content-slider-block
  * Requires at least: 6.5
- * Tested up to: 7.0
+ * Tested up to: 7.1
  * Requires PHP: 7.4
  * @fs_premium_only /vendor/freemius, /includes/fs.php, /includes/admin/CPT.php, includes/LicenseActivation.php, /build/admin/post.asset.php, /build/admin/post.css, /build/admin/post.js
  * @fs_free_only /vendor/freemius-lite, /includes/fs-lite.php, /includes/admin/SubMenu.php
@@ -61,9 +61,9 @@ if ( function_exists( 'csb_fs' ) ) {
 			 * Filters the default post title when creating a new page from the dashboard link.
 			 *
 			 * @since 1.0.0
-			 * @param string  $title The default post title.
-			 * @param WP_Post $post  The post object.
-			 * @return string The filtered post title.
+			 * @param string	$title	The default post title.
+			 * @param WP_Post	$post	The post object.
+			 * @return string	The filtered post title.
 			 */
 			function defaultTitle( $title, $post ) {
 				if ( 'page' === $post->post_type && isset( $_GET['title'] ) ) {
@@ -80,9 +80,9 @@ if ( function_exists( 'csb_fs' ) ) {
 			 * Filters the default post content when creating a new page from the dashboard link.
 			 *
 			 * @since 1.0.0
-			 * @param string  $content The default post content.
-			 * @param WP_Post $post    The post object.
-			 * @return string The filtered post content.
+			 * @param string	$content	The default post content.
+			 * @param WP_Post	$post		The post object.
+			 * @return string	The filtered post content.
 			 */
 			function defaultContent( $content, $post ) {
 				if ( 'page' === $post->post_type && isset( $_GET['content'] ) ) {
@@ -99,9 +99,9 @@ if ( function_exists( 'csb_fs' ) ) {
 			 * Adds action links to the plugin listing in the admin area.
 			 *
 			 * @since 1.0.0
-			 * @param array  $links An array of plugin action links.
-			 * @param string $file  Path to the plugin file relative to the plugins directory.
-			 * @return array The filtered array of plugin action links.
+			 * @param array		$links	An array of plugin action links.
+			 * @param string	$file	Path to the plugin file relative to the plugins directory.
+			 * @return array	The filtered array of plugin action links.
 			 */
 			function pluginActionLinks( $links, $file ) {
 				if( plugin_basename( __FILE__ ) === $file ) {

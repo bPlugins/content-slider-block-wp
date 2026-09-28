@@ -4,6 +4,8 @@ import { useBlockProps } from '@wordpress/block-editor';
 import { produce } from 'immer';
 const $ = jQuery;
 
+import useIframeAssetSync from '../../../../bpl-tools/hooks/useIframeAssetSync';
+
 import Settings from './Settings/Settings';
 import Slider from '../Common/Slider';
 import Style from '../Common/Style';
@@ -15,6 +17,8 @@ const Edit = props => {
 
 	const blockProps = useBlockProps();
 	const id = blockProps.id;
+
+	useIframeAssetSync(['csb-content-slider-block-editor-style-css', 'csb-content-slider-block-style-css']);
 
 	const [activeIndex, setActiveIndex] = useState(0);
 	const [rendered, setRendered] = useState(true);
